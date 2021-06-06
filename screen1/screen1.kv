@@ -1,0 +1,17 @@
+<Screen1>:
+    cols: 2
+    name: "screen1_name"
+    FloatLayout:
+        cols: 1
+        Button:
+            text: 'B1a'
+            size_hint: .3, .3
+            pos_hint: {'x':0.05, 'y':0.1}
+            on_press:
+                root.button_b1a_handle()
+        Button:
+            text: 'B1b'
+            size_hint: .3, .3
+            pos_hint: {'x':0.5, 'y':0.1}
+            on_press:
+                root.button_b1b_handle()

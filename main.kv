@@ -1,0 +1,22 @@
+<my>
+Screen:
+
+    MDToolbar:
+        id: toolbar
+        pos_hint: {"top": 1}
+        elevation: 10
+        title: "AppNavigationDrawer"
+        left_action_items: [["menu", lambda x: nav_drawer.set_state("open")]]
+
+    NavigationLayout:
+        x: toolbar.height
+
+        WindowManager:
+            id: screen_manager
+
+        MDNavigationDrawer:
+            id: nav_drawer
+
+            ContentNavigationDrawer:
+                screen_manager: screen_manager
+                nav_drawer: nav_drawer

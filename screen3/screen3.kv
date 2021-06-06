@@ -1,0 +1,18 @@
+<Screen3>:
+    cols: 1
+    name: "screen3_name"
+    FloatLayout:
+        Button:
+            text: 'B3a'
+            size_hint: .3, .3
+            pos_hint: {'x':0.05, 'y':0.1}
+            background_color: 0.7, 0.1, 0.1, 1
+            on_press:
+                root.button_b3a_handle()
+        Button:
+            text: 'B3b'
+            size_hint: .3, .3
+            pos_hint: {'x':0.5, 'y':0.1}
+            background_color: 0.7, 0.1, 0.1, 1
+            on_press:
+                root.button_b3b_handle()

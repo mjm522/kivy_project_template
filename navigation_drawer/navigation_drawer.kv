@@ -1,0 +1,29 @@
+<ContentNavigationDrawer>:
+
+    ScrollView:
+
+        MDList:
+
+            OneLineListItem:
+                text: "Screen 1"
+                on_press:
+                    root.nav_drawer.set_state("close")
+                    root.screen_manager.current = "screen1_name"
+
+            OneLineListItem:
+                text: "Screen 2"
+                on_press:
+                    root.nav_drawer.set_state("close")
+                    root.screen_manager.current = "screen2_name"
+
+            OneLineListItem:
+                text: "Screen 3"
+                on_press:
+                    root.nav_drawer.set_state("close")
+                    root.screen_manager.current = "screen3_name"
+
+            OneLineListItem:
+                text: "Multitab Screen"
+                on_press:
+                    root.nav_drawer.set_state("close")
+                    root.screen_manager.current = "multitab_screen"
