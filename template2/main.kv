@@ -1,0 +1,63 @@
+#:import  Analysis analysis.analysis.Analysis
+#:import  Summary summary.summary.Summary
+#:import  MultitabScreen payments.payments.MultitabScreen
+#:import  Settings settings.settings.Settings
+
+<StrokeTab@TabbedPanelItem>:
+    background_color: (0,0,0,0)
+    background_normal: ''
+    back_color: (1,1,1,1)
+    border_radius:18
+    color: self.back_color
+    bold: True
+    image_source: ''
+    spacing: 10
+    canvas.before:
+        Color:
+            rgba: self.back_color
+        RoundedRectangle:
+            pos: self.pos[0], self.pos[1]
+            size: self.size[0]/1.1, self.size[1]/1.1
+            radius: [20, 20, 20, 20]
+            source: self.image_source
+
+TabManager:
+    
+    do_default_tab: False
+    tab_height: root.height/6
+
+    StrokeTab:
+        image_source: "images/payments_button.jpg"
+        GridLayout:
+            rows: 2
+            MultitabScreen:
+                id: multitab_screen_payments
+                tab_height: root.height/6
+            Button:
+                size: 0.2, 0.2
+                text: 'Date'
+                on_press: 
+                    root.open_date_picker()
+
+    StrokeTab:
+        image_source: "images/analysis_button.jpg"
+        BoxLayout:
+            Analysis:
+
+    StrokeTab:
+        image_source: "images/summary_button.jpg"
+        GridLayout:
+            rows: 2
+            Summary:
+            Button:
+                size: 0.2, 0.2
+                text: 'Date'
+                on_press: root.open_date_picker()
+
+    StrokeTab:
+        image_source: "images/settings_button.jpg"
+        BoxLayout:
+            Settings:
+
+
+    

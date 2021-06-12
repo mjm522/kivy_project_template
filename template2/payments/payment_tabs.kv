@@ -1,0 +1,56 @@
+#:import MovableTabs payments.movable_tabs.MovableTabs
+
+<PaymentTabs>:
+    id: all_payment_tabs
+    MovableTabs:
+        id: thePanel
+        size_hint: .9, .9
+        pos_hint: {'center_x': .5, 'center_y': .5}
+        do_default_tab: False
+        tab_height: self.parent.height/4
+        canvas.before:
+            Color:
+                rgb: 0.9, 0.3, .02
+
+        StrokeTab:
+            id: payments_grocerries_tab
+            image_source:"payments/images/groceries_tab.jpg"
+            
+            Label:
+                id: payments_grocerries_label
+                text: 'This is for grocery expenses'
+
+        StrokeTab:
+            id: payments_utility_tab
+            image_source: "payments/images/utility_tab.jpeg"
+            Label:
+                text: 'This is for utility expenses'
+
+        StrokeTab:
+            id: payments_commute_tab
+            image_source: "payments/images/commute_tab.jpg"
+            Label:
+                text: 'This is for logging travel expenses'
+
+        StrokeTab:
+            id: payments_foodout_tab
+            image_source: "payments/images/foodout_tab.jpeg"
+            Label:
+                text: 'This is for logging food out expenses'
+
+        StrokeTab:
+            id: payments_entertainment_tab
+            image_source: "payments/images/entertainment_tab.jpg"
+            Label:
+                text: 'This is for logging entertainment expenses'
+        StrokeTab:
+            id: payments_creditcard_tab
+            image_source: "payments/images/credit_card_tab.jpg"
+            Label:
+                text: 'This is logging credit card expenses'
+
+        StrokeTab:
+            id: payments_investment_tab
+            image_source: "payments/images/investment_tab.jpg"
+            Label:
+                text: 'This is logging investment expenses'

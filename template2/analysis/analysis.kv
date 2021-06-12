@@ -1,0 +1,18 @@
+<Analysis>:
+    cols: 1
+    name: "analysis_screen"
+    FloatLayout:
+        Button:
+            text: 'B1a'
+            size_hint: .3, .3
+            pos_hint: {'x':0.05, 'y':0.1}
+            background_color: 0.1, 0.7, 0.1, 1
+            on_press:
+                root.button_b1a_handle()
+        Button:
+            text: 'B1b'
+            size_hint: .3, .3
+            pos_hint: {'x':0.5, 'y':0.1}
+            background_color: 0.1, 0.7, 0.1, 1
+            on_press:
+                root.button_b1b_handle()
